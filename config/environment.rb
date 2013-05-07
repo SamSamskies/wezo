@@ -1,4 +1,4 @@
-ter# Set up gems listed in the Gemfile.
+# Set up gems listed in the Gemfile.
 # See: http://gembundler.com/bundler_setup.html
 #      http://stackoverflow.com/questions/7243486/why-do-you-need-require-bundler-setup
 ENV['BUNDLE_GEMFILE'] ||= File.expand_path('../../Gemfile', __FILE__)
@@ -31,3 +31,10 @@ Dir[APP_ROOT.join('app', 'helpers', '*.rb')].each { |file| require file }
 
 # Set up the database and models
 require APP_ROOT.join('config', 'database')
+
+# twilio setup
+require 'twilio-ruby'
+
+
+twilio_config = YAML.load(File.read(APP_ROOT.join('config', 'application.yml')))
+twilio_config.each {|k,v| ENV[k]=v}

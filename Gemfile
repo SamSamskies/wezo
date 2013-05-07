@@ -14,10 +14,10 @@ gem 'activesupport'
 gem 'activerecord'
 
 gem 'rake'
-
+gem 'twilio-ruby'
 gem 'shotgun'
+gem 'faker'
 
 group :test do
-  gem 'faker'
-  gem 'rspec'
+  # gem 'rspec'
 end
