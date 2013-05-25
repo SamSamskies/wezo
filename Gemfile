@@ -9,6 +9,7 @@ gem 'sinatra-contrib'
 
 # Use Thin for our web server
 gem 'thin'
+gem 'twitter'
 
 gem 'activesupport'
 gem 'activerecord'
@@ -19,5 +20,5 @@ gem 'shotgun'
 gem 'faker'
 
 group :test do
-  # gem 'rspec'
+  gem 'rspec'
 end

@@ -1,0 +1,13 @@
+<div class="container">
+  <table>
+    <% @incoming.each do |message| %>
+    <tr>
+      <td><%= message.status %></td>
+      <td><%= message.date_created %></td>
+      <td><%= message.body %></td>
+      <td><%= message.from %></td>
+      <td><%= message.to %></td>
+    </tr>
+    <% end %>
+  </table>
+</div>
