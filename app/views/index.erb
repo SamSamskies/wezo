@@ -1,9 +1,22 @@
 <div class="container">
   <h1>Welcome to Sinatra!</h1>
   <p>Hello, world!</p>
-<form action="/" method="post">
-  <input type="text" name="to" placeholder="to-number" value="+18082183629">
-  <textarea type="text" name="message" placeholder="message"></textarea>
-  <input type="submit" value="send">
-</form>
+  <% @questions.each do |q|  %>
+    <% if q.question.match(/#t/) %>
+  <%= "translate this shit:" %></br>
+  <% end %>
+  <%= q.user.name %>
+  <%= q.question %>
+  <p>Answers so far</p>
+  <% q.answers.each do |a| %>
+    <%= a.answer %>
+  <% end %>
+  <form action="/send_message" method="post">
+    <input type="hidden" name="to" placeholder="to-number" value="<%= q.user.phone_number %>">
+    <input type="hidden" name="question_id" placeholder="to-number" value="<%= q.id %>">
+    <textarea type="text" name="message" placeholder="message"></textarea>
+    <input type="submit" value="send">
+  </form></br>
+  <% end %>
+
 </div>

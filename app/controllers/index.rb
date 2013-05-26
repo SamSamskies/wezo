@@ -3,48 +3,29 @@ before do
 end
 
 get '/' do
+  @questions = Question.includes(:user, :answers).all
   erb :index
 end
 
-get '/incoming' do
-  @incoming = @client.account.sms.messages.list.select { |message| message.body.match(/#twt/)}
-  @incoming.each { |message| Twitter.update(message.body + " test2 ") }
+get '/complete_message_list' do
+  @incoming = @client.account.sms.messages.list
   erb :incoming
 end
 
-post '/' do
-  @message = @client.account.sms.messages.create(
-    :from => '+17202599396',
-    :to => params[:to],
-    :body => params[:message]
-    )
-  p @message
-  redirect to('/incoming')
+post '/send_message' do
+  send_response({
+                to: params[:to], 
+                body: params[:message], 
+                question_id: params[:question_id]
+                                                 })
+  redirect to('/')
 end
 
-get '/incoming_message' do
-  p params
-  p params[:AccountSid]
-  p params[:Body]
-  p params[:From]
-  p session
-  sms_count = session["counter"]
-  if sms_count == 0
-    message = "Hello, thanks for the new message."
+post '/receive_callback' do
+  if user = User.where(phone_number: params[:From]).first
+    user.questions.create(question: params[:Body], status: "open")
   else
-    message = "Hello, thanks for message number #{sms_count + 1}"
+    sms_response(USER_NOT_FOUND_MSG)
   end
-  twiml = Twilio::TwiML::Response.new do |r|
-    r.Sms message
-  end
-  session["counter"] += 1
-  twiml.text
-
 end
 
-
-  # twiml = Twilio::TwiML::Response.new do |r|
-  #   r.Sms "Hey Sam, you are a dickhead!"
-  # end
-  # p twiml.text
-  # twiml.text
