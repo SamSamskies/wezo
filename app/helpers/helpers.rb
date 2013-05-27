@@ -8,7 +8,7 @@ helpers do
   end
 
   def send_message(args)
-    args[:to] = User.find(args[:user_id])
+    args[:to] = User.find(args[:user_id]).phone_number
     @client.account.sms.messages.create(
       :from => TWILLIO_NUM,
       :to => args[:to],

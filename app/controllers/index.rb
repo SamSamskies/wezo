@@ -13,8 +13,10 @@ get '/complete_message_list' do
 end
 
 post '/send_message' do
+  p params
+  p params[:user_id]
   send_response({
-                to: params[:user_id], 
+                user_id: params[:user_id], 
                 body: params[:message], 
                 incoming_id: params[:incoming_id]
                                                  })
