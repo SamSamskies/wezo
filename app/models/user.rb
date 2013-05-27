@@ -1,4 +1,4 @@
-class User < ActiveRecord::Base
-  # Remember to create a migration!
-  has_many :questions
+class User < ActiveRecord::Base  
+  has_many :incomings
+  has_many :outgoings
 end
