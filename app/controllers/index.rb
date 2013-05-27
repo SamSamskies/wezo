@@ -3,7 +3,7 @@ before do
 end
 
 get '/' do
-  @questions = Question.includes(:user, :answers).all
+  @questions = Incoming.includes(:user, :outgoings).all
   erb :index
 end
 
@@ -14,9 +14,9 @@ end
 
 post '/send_message' do
   send_response({
-                to: params[:to], 
+                to: params[:user_id], 
                 body: params[:message], 
-                question_id: params[:question_id]
+                incoming_id: params[:incoming_id]
                                                  })
   redirect to('/')
 end
