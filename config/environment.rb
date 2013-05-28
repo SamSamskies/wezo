@@ -38,14 +38,14 @@ require APP_ROOT.join('config', 'database')
 require 'twilio-ruby'
 
 
-twilio_config = YAML.load(File.read(APP_ROOT.join('config', 'application.yml')))
-twilio_config.each {|k,v| ENV[k]=v}
+# twilio_config = YAML.load(File.read(APP_ROOT.join('config', 'application.yml')))
+# twilio_config.each {|k,v| ENV[k]=v}
 
 # twitter setup
 
-Twitter.configure do |config|
-  config.consumer_key = ENV['consumer_key']
-  config.consumer_secret = ENV['consumer_secret']
-  config.oauth_token = ENV['oauth_token']
-  config.oauth_token_secret = ENV['oauth_token_secret']
-end
+# Twitter.configure do |config|
+#   config.consumer_key = ENV['consumer_key']
+#   config.consumer_secret = ENV['consumer_secret']
+#   config.oauth_token = ENV['oauth_token']
+#   config.oauth_token_secret = ENV['oauth_token_secret']
+# end
