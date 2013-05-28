@@ -7,6 +7,11 @@ helpers do
     date.strftime("%Y-%m-%d %H:%M:%S UTC")
   end
 
+  def send_response(args)
+    send_message(args)
+    save_message(args)
+  end
+
   def send_message(args)
     args[:to] = User.find(args[:to_user_id]).phone_number
     @client.account.sms.messages.create(
@@ -16,15 +21,9 @@ helpers do
       )
   end
 
-  def send_response(args)
-    send_message(args)
-    save_message(args)
-  end
-
   def save_message(args)
-    incoming = Message.where(id: args[:incoming_id]).first
-    #note create association with current user
-    incoming.children.create(:parent => incoming, message: args[:body], user_id: args[:from_user_id], msg_type: "outgoing")
+    incoming = Incoming.where(id: args[:incoming_id]).first
+    incoming.reponses.create(message: args[:body], user_id: args[:from_user_id])
   end
 
   def sms_response(message)
