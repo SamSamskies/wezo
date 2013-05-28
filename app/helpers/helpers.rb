@@ -1,24 +1,8 @@
 helpers do
   TWILLIO_NUM = '+17202599396'
-  USER_NOT_FOUND_MSG = "Your number does not seem to be on our system. Please register an your number at www.wezolo.com!"
-  VERIFY_PHONE_NUM_MSG = "Please enter the following code into the registration website: #{SecureRandom.hex(2)}"
 
   def date(date)
     date.strftime("%Y-%m-%d %H:%M:%S UTC")
-  end
-
-  def send_response(args)
-    send_message(args)
-    save_message(args)
-  end
-
-  def send_message(args)
-    args[:to] = User.find(args[:to_user_id]).phone_number
-    @client.account.sms.messages.create(
-      :from => TWILLIO_NUM,
-      :to => args[:to],
-      :body => args[:body]
-      )
   end
 
   def save_message(args)

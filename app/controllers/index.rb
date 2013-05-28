@@ -3,20 +3,22 @@ before do
 end
 
 post '/send_message' do
-  send_response({
-                to_user_id: params[:incoming_user_id], 
-                response_user_id: params[:response_user_id],
-                incoming_id: params[:incoming_id],
-                body: params[:message]
-                                                 })
+  @client.account.sms.messages.create(
+    :from => TWILLIO_NUM,
+    :to => params[:to],
+    :body => params[:body]
+    )
+  status 200
+  body "Message Sent"
 end
 
 post '/receive_callback' do
-  if user = User.where(phone_number: params[:From]).first
-    user.incomings.create(message: params[:Body])
-  else
-    sms_response(USER_NOT_FOUND_MSG)
-  end
+  conn = Faraday.new(:url => 'http://localhost:3000/') do |faraday|
+      faraday.request  :url_encoded             # form-encode POST params
+      faraday.response :logger                  # log requests to STDOUT
+      faraday.adapter  Faraday.default_adapter  # make requests with Net::HTTP
+    end
+    response = conn.post '/receive_callback', params
 end
 
 

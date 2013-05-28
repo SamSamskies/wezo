@@ -78,6 +78,7 @@ DEPENDENCIES
   activerecord
   activesupport
   faker
+  faraday
   pg
   rake
   rspec
