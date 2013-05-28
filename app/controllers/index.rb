@@ -2,10 +2,10 @@ before do
   @client = Twilio::REST::Client.new ENV['twilio_account_sid'], ENV['twilio_auth_token']
 end
 
-get '/' do
-  @questions = Message.includes(:user).all
-  erb :index
-end
+# get '/' do
+#   @questions = Message.includes(:user).all
+#   erb :index
+# end
 
 # get '/complete_message_list' do
 #   @incoming = @client.account.sms.messages.list
@@ -20,7 +20,6 @@ post '/send_message' do
                 incoming_id: params[:incoming_id],
                 from_user_id: params[:from_user_id]
                                                  })
-  redirect to('/')
 end
 
 post '/receive_callback' do
