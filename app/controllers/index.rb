@@ -4,8 +4,8 @@ end
 
 post '/send_message' do
   send_response({
-                to_user_id: params[:to_user_id], 
-                from_user_id: params[:from_user_id],
+                to_user_id: params[:incoming_user_id], 
+                response_user_id: params[:response_user_id],
                 incoming_id: params[:incoming_id],
                 body: params[:message]
                                                  })
@@ -13,15 +13,11 @@ end
 
 post '/receive_callback' do
   if user = User.where(phone_number: params[:From]).first
-    user.questions.create(message: params[:Body], status: "open", msg_type: "incoming")
+    user.incomings.create(message: params[:Body])
   else
     sms_response(USER_NOT_FOUND_MSG)
   end
 end
-
-
-
-
 
 
 # get '/' do

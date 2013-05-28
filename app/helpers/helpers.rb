@@ -23,7 +23,7 @@ helpers do
 
   def save_message(args)
     incoming = Incoming.where(id: args[:incoming_id]).first
-    incoming.reponses.create(message: args[:body], user_id: args[:from_user_id])
+    incoming.responses.create(message: args[:body], user_id: args[:response_user_id])
   end
 
   def sms_response(message)
