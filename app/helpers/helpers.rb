@@ -8,7 +8,7 @@ helpers do
   end
 
   def send_message(args)
-    args[:to] = User.find(args[:user_id]).phone_number
+    args[:to] = User.find(args[:to_user_id]).phone_number
     @client.account.sms.messages.create(
       :from => TWILLIO_NUM,
       :to => args[:to],
@@ -22,9 +22,9 @@ helpers do
   end
 
   def save_message(args)
-    incoming = Incoming.where(id: args[:incoming_id]).first
+    incoming = Message.where(id: args[:incoming_id]).first
     #note create association with current user
-    incoming.outgoings.create(:incoming => incoming, message: args[:body])
+    incoming.children.create(:parent => incoming, message: args[:body], user_id: args[:from_user_id], msg_type: "outgoing")
   end
 
   def sms_response(message)

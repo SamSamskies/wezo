@@ -1,4 +1,3 @@
 class User < ActiveRecord::Base  
-  has_many :incomings
-  has_many :outgoings
+  has_many :messages
 end
