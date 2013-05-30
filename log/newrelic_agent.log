@@ -1,0 +1,67 @@
+# Logfile created on 2013-05-30 10:44:52 -0700 by logger.rb/31641
+[05/30/13 10:44:52 -0700 sidas-MacBook-Air.local (29925)] INFO : Starting the New Relic agent in "development" environment.
+[05/30/13 10:44:52 -0700 sidas-MacBook-Air.local (29925)] INFO : To prevent agent startup add a NEWRELIC_ENABLE=false environment variable or modify the "development" section of your newrelic.yml.
+[05/30/13 10:44:52 -0700 sidas-MacBook-Air.local (29925)] INFO : Reading configuration from config/newrelic.yml
+[05/30/13 10:44:52 -0700 sidas-MacBook-Air.local (29925)] INFO : Environment: development
+[05/30/13 10:44:52 -0700 sidas-MacBook-Air.local (29925)] INFO : Dispatcher: thin
+[05/30/13 10:44:52 -0700 sidas-MacBook-Air.local (29925)] INFO : Application: My Application
+[05/30/13 10:44:52 -0700 sidas-MacBook-Air.local (29925)] WARN : Agent configured not to send data in this environment.
+[05/30/13 10:44:52 -0700 sidas-MacBook-Air.local (29925)] INFO : Installing ActiveRecord instrumentation
+[05/30/13 10:44:53 -0700 sidas-MacBook-Air.local (29925)] INFO : Installing Net instrumentation
+[05/30/13 10:44:53 -0700 sidas-MacBook-Air.local (29925)] INFO : Installing Sinatra instrumentation
+[05/30/13 10:44:53 -0700 sidas-MacBook-Air.local (29925)] INFO : Finished instrumentation
+[05/30/13 10:44:54 -0700 sidas-MacBook-Air.local (29928)] INFO : Starting the New Relic agent in "development" environment.
+[05/30/13 10:44:54 -0700 sidas-MacBook-Air.local (29928)] INFO : To prevent agent startup add a NEWRELIC_ENABLE=false environment variable or modify the "development" section of your newrelic.yml.
+[05/30/13 10:44:54 -0700 sidas-MacBook-Air.local (29928)] INFO : Reading configuration from config/newrelic.yml
+[05/30/13 10:44:54 -0700 sidas-MacBook-Air.local (29928)] INFO : Environment: development
+[05/30/13 10:44:54 -0700 sidas-MacBook-Air.local (29928)] INFO : Dispatcher: thin
+[05/30/13 10:44:54 -0700 sidas-MacBook-Air.local (29928)] INFO : Application: My Application
+[05/30/13 10:44:54 -0700 sidas-MacBook-Air.local (29928)] WARN : Agent configured not to send data in this environment.
+[05/30/13 10:44:54 -0700 sidas-MacBook-Air.local (29928)] INFO : Installing ActiveRecord instrumentation
+[05/30/13 10:44:54 -0700 sidas-MacBook-Air.local (29928)] INFO : Installing Net instrumentation
+[05/30/13 10:44:54 -0700 sidas-MacBook-Air.local (29928)] INFO : Installing Sinatra instrumentation
+[05/30/13 10:44:54 -0700 sidas-MacBook-Air.local (29928)] INFO : Finished instrumentation
+[05/30/13 10:46:03 -0700 sidas-MacBook-Air.local (29971)] INFO : Starting the New Relic agent in "development" environment.
+[05/30/13 10:46:03 -0700 sidas-MacBook-Air.local (29971)] INFO : To prevent agent startup add a NEWRELIC_ENABLE=false environment variable or modify the "development" section of your newrelic.yml.
+[05/30/13 10:46:03 -0700 sidas-MacBook-Air.local (29971)] INFO : Reading configuration from config/newrelic.yml
+[05/30/13 10:46:03 -0700 sidas-MacBook-Air.local (29971)] INFO : Environment: development
+[05/30/13 10:46:03 -0700 sidas-MacBook-Air.local (29971)] INFO : Dispatcher: thin
+[05/30/13 10:46:03 -0700 sidas-MacBook-Air.local (29971)] INFO : Application: My Application
+[05/30/13 10:46:03 -0700 sidas-MacBook-Air.local (29971)] WARN : Agent configured not to send data in this environment.
+[05/30/13 10:46:03 -0700 sidas-MacBook-Air.local (29971)] INFO : Installing ActiveRecord instrumentation
+[05/30/13 10:46:04 -0700 sidas-MacBook-Air.local (29971)] INFO : Installing Net instrumentation
+[05/30/13 10:46:04 -0700 sidas-MacBook-Air.local (29971)] INFO : Installing Sinatra instrumentation
+[05/30/13 10:46:04 -0700 sidas-MacBook-Air.local (29971)] INFO : Finished instrumentation
+[05/30/13 10:46:05 -0700 sidas-MacBook-Air.local (29974)] INFO : Starting the New Relic agent in "development" environment.
+[05/30/13 10:46:05 -0700 sidas-MacBook-Air.local (29974)] INFO : To prevent agent startup add a NEWRELIC_ENABLE=false environment variable or modify the "development" section of your newrelic.yml.
+[05/30/13 10:46:05 -0700 sidas-MacBook-Air.local (29974)] INFO : Reading configuration from config/newrelic.yml
+[05/30/13 10:46:05 -0700 sidas-MacBook-Air.local (29974)] INFO : Environment: development
+[05/30/13 10:46:05 -0700 sidas-MacBook-Air.local (29974)] INFO : Dispatcher: thin
+[05/30/13 10:46:05 -0700 sidas-MacBook-Air.local (29974)] INFO : Application: My Application
+[05/30/13 10:46:05 -0700 sidas-MacBook-Air.local (29974)] WARN : Agent configured not to send data in this environment.
+[05/30/13 10:46:05 -0700 sidas-MacBook-Air.local (29974)] INFO : Installing ActiveRecord instrumentation
+[05/30/13 10:46:05 -0700 sidas-MacBook-Air.local (29974)] INFO : Installing Net instrumentation
+[05/30/13 10:46:05 -0700 sidas-MacBook-Air.local (29974)] INFO : Installing Sinatra instrumentation
+[05/30/13 10:46:05 -0700 sidas-MacBook-Air.local (29974)] INFO : Finished instrumentation
+[05/30/13 10:49:07 -0700 sidas-MacBook-Air.local (30098)] INFO : Starting the New Relic agent in "development" environment.
+[05/30/13 10:49:07 -0700 sidas-MacBook-Air.local (30098)] INFO : To prevent agent startup add a NEWRELIC_ENABLE=false environment variable or modify the "development" section of your newrelic.yml.
+[05/30/13 10:49:07 -0700 sidas-MacBook-Air.local (30098)] INFO : Reading configuration from config/newrelic.yml
+[05/30/13 10:49:07 -0700 sidas-MacBook-Air.local (30098)] INFO : Environment: development
+[05/30/13 10:49:07 -0700 sidas-MacBook-Air.local (30098)] INFO : No known dispatcher detected.
+[05/30/13 10:49:07 -0700 sidas-MacBook-Air.local (30098)] INFO : Application: My Application
+[05/30/13 10:49:07 -0700 sidas-MacBook-Air.local (30098)] WARN : Agent configured not to send data in this environment.
+[05/30/13 10:49:07 -0700 sidas-MacBook-Air.local (30098)] INFO : Installing ActiveRecord instrumentation
+[05/30/13 10:49:07 -0700 sidas-MacBook-Air.local (30098)] INFO : Installing Net instrumentation
+[05/30/13 10:49:07 -0700 sidas-MacBook-Air.local (30098)] INFO : Installing Sinatra instrumentation
+[05/30/13 10:49:07 -0700 sidas-MacBook-Air.local (30098)] INFO : Finished instrumentation
+[05/30/13 10:50:32 -0700 sidas-MacBook-Air.local (30149)] INFO : Starting the New Relic agent in "development" environment.
+[05/30/13 10:50:32 -0700 sidas-MacBook-Air.local (30149)] INFO : To prevent agent startup add a NEWRELIC_ENABLE=false environment variable or modify the "development" section of your newrelic.yml.
+[05/30/13 10:50:32 -0700 sidas-MacBook-Air.local (30149)] INFO : Reading configuration from config/newrelic.yml
+[05/30/13 10:50:32 -0700 sidas-MacBook-Air.local (30149)] INFO : Environment: development
+[05/30/13 10:50:32 -0700 sidas-MacBook-Air.local (30149)] INFO : No known dispatcher detected.
+[05/30/13 10:50:32 -0700 sidas-MacBook-Air.local (30149)] INFO : Application: My Application
+[05/30/13 10:50:32 -0700 sidas-MacBook-Air.local (30149)] WARN : Agent configured not to send data in this environment.
+[05/30/13 10:50:32 -0700 sidas-MacBook-Air.local (30149)] INFO : Installing ActiveRecord instrumentation
+[05/30/13 10:50:32 -0700 sidas-MacBook-Air.local (30149)] INFO : Installing Net instrumentation
+[05/30/13 10:50:32 -0700 sidas-MacBook-Air.local (30149)] INFO : Installing Sinatra instrumentation
+[05/30/13 10:50:32 -0700 sidas-MacBook-Air.local (30149)] INFO : Finished instrumentation
