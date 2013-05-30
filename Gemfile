@@ -23,6 +23,4 @@ group :test do
   gem 'rspec'
 end
 
-gem "faraday"
-
 gem 'newrelic_rpm'
