@@ -24,3 +24,5 @@ group :test do
 end
 
 gem "faraday"
+
+gem 'newrelic_rpm'

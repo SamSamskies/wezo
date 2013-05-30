@@ -23,15 +23,3 @@ helpers do
     #Verification.create()
   end
 end
-
-
-
-# get '/' do
-#   @questions = Message.includes(:user).all
-#   erb :index
-# end
-
-# get '/complete_message_list' do
-#   @incoming = @client.account.sms.messages.list
-#   erb :incoming
-# end

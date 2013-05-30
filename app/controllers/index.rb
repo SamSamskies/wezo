@@ -11,13 +11,3 @@ post '/send_message' do
   status 200
   body "Message Sent"
 end
-
-# post '/receive_callback' do
-
-#   conn = Faraday.new(:url => params[:callback]) do |faraday|
-#       faraday.request  :url_encoded             # form-encode POST params
-#       faraday.response :logger                  # log requests to STDOUT
-#       faraday.adapter  Faraday.default_adapter  # make requests with Net::HTTP
-#     end
-#     response = conn.post '/receive_callback', params
-# end
